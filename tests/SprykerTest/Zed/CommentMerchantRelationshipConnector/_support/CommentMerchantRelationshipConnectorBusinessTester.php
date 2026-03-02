@@ -46,9 +46,6 @@ class CommentMerchantRelationshipConnectorBusinessTester extends Actor
      */
     protected const COMMENT_THREAD_MERCHANT_RELATIONSHIP_OWNER_TYPE = 'merchant_relationship';
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer
-     */
     public function createMerchantRelationship(): MerchantRelationshipTransfer
     {
         $merchantTransfer = $this->haveMerchant();
@@ -72,11 +69,6 @@ class CommentMerchantRelationshipConnectorBusinessTester extends Actor
         ]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadTransfer
-     */
     public function addCustomerCommentToMerchantRelationship(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): CommentThreadTransfer {
@@ -91,11 +83,6 @@ class CommentMerchantRelationshipConnectorBusinessTester extends Actor
         ])->getCommentThread();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadTransfer
-     */
     public function addUserCommentToMerchantRelationship(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): CommentThreadTransfer {

@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer;
 
 interface CommentThreadExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer
-     */
     public function expandMerchantRelationshipCollection(
         MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
     ): MerchantRelationshipCollectionTransfer;

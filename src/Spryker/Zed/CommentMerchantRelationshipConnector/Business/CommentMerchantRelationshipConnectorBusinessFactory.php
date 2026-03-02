@@ -20,9 +20,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class CommentMerchantRelationshipConnectorBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\CommentMerchantRelationshipConnector\Business\Expander\CommentThreadExpanderInterface
-     */
     public function createCommentThreadExpander(): CommentThreadExpanderInterface
     {
         return new CommentThreadExpander(
@@ -30,9 +27,6 @@ class CommentMerchantRelationshipConnectorBusinessFactory extends AbstractBusine
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CommentMerchantRelationshipConnector\Business\Reader\CommentReaderInterface
-     */
     public function createCommentReader(): CommentReaderInterface
     {
         return new CommentReader(
@@ -40,9 +34,6 @@ class CommentMerchantRelationshipConnectorBusinessFactory extends AbstractBusine
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CommentMerchantRelationshipConnector\Dependency\Facade\CommentMerchantRelationshipConnectorToCommentFacadeInterface
-     */
     public function getCommentFacade(): CommentMerchantRelationshipConnectorToCommentFacadeInterface
     {
         return $this->getProvidedDependency(CommentMerchantRelationshipConnectorDependencyProvider::FACADE_COMMENT);

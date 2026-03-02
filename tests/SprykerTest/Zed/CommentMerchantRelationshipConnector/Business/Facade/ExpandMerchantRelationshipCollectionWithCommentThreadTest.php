@@ -36,9 +36,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
      */
     protected CommentMerchantRelationshipConnectorBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -48,9 +45,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandRelationshipWithCommentThread(): void
     {
         // Arrange
@@ -82,9 +76,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         $this->assertCount($commentThreadTransfer->getComments()->count(), $persistedCommentThread->getComments());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandRelationshipWithCustomerComment(): void
     {
         // Arrange
@@ -109,9 +100,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         $this->assertNotNull($merchantRelationship->getCommentThread());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandRelationshipWithUserComment(): void
     {
         // Arrange
@@ -136,9 +124,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         $this->assertNotNull($merchantRelationship->getCommentThread());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandRelationshipWithCommentThreadOnlyForOneRelationship(): void
     {
         // Arrange
@@ -164,9 +149,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testShouldSkipExpansionForRequestsWithoutCommentThreads(): void
     {
         // Arrange
@@ -191,9 +173,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testShouldSkipExpansionWhenEmptyCollection(): void
     {
         // Act
@@ -205,9 +184,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
         $this->assertEmpty($merchantRelationshipCollectionTransfer->getMerchantRelationships());
     }
 
-    /**
-     * @return void
-     */
     public function testThrowNullValueExceptionWhenMerchantRelationshipIdNotProvided(): void
     {
         // Assert
@@ -222,9 +198,6 @@ class ExpandMerchantRelationshipCollectionWithCommentThreadTest extends Unit
             );
     }
 
-    /**
-     * @return void
-     */
     public function testShouldSkipExpansionWhenCommentThreadWithWrongOwnerType(): void
     {
         // Arrange
